@@ -34,15 +34,17 @@ ActiveRecord::Schema.define(version: 20140820072926) do
     t.datetime "updated_at"
   end
 
-  create_table "perchase_histories", force: true do |t|
-    t.date     "purchase_data"
-    t.string   "transaction_type"
+  create_table "products", force: true do |t|
+    t.integer  "cost"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "products", force: true do |t|
-    t.integer  "cost"
+  create_table "purchase_histories", force: true do |t|
+    t.date     "purchase_data"
+    t.string   "transaction_type"
+    t.string   "person_id"
+    t.string   "product_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
