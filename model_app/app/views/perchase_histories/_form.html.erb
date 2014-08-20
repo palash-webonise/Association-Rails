@@ -1,0 +1,25 @@
+<%= form_for(@perchase_history) do |f| %>
+  <% if @perchase_history.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@perchase_history.errors.count, "error") %> prohibited this perchase_history from being saved:</h2>
+
+      <ul>
+      <% @perchase_history.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :purchase_data %><br>
+    <%= f.date_select :purchase_data %>
+  </div>
+  <div class="field">
+    <%= f.label :transaction_type %><br>
+    <%= f.text_field :transaction_type %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

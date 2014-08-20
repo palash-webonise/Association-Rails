@@ -1,0 +1,27 @@
+<h1>Listing perchase_histories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Purchase data</th>
+      <th>Transaction type</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @perchase_histories.each do |perchase_history| %>
+      <tr>
+        <td><%= perchase_history.purchase_data %></td>
+        <td><%= perchase_history.transaction_type %></td>
+        <td><%= link_to 'Show', perchase_history %></td>
+        <td><%= link_to 'Edit', edit_perchase_history_path(perchase_history) %></td>
+        <td><%= link_to 'Destroy', perchase_history, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Perchase history', new_perchase_history_path %>

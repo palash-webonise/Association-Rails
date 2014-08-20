@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Purchase data:</strong>
+  <%= @perchase_history.purchase_data %>
+</p>
+
+<p>
+  <strong>Transaction type:</strong>
+  <%= @perchase_history.transaction_type %>
+</p>
+
+<%= link_to 'Edit', edit_perchase_history_path(@perchase_history) %> |
+<%= link_to 'Back', perchase_histories_path %>
